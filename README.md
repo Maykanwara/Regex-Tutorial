@@ -1,81 +1,88 @@
-# Regex-Tutorial
+Welcome to my tutorial. Today we are going to talk about Regex.
 
-## Description
+Summary
+Below is code we will look at to study Regex. The code snippet is a regular expression used to match an email address.
 
-This is my Regex tutorial.
+var test = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+The Components of Regex
+//
+These forward slashes indicate the start and end of a regular expression.
 
+^
+This symbol indicates the beginning of the sting or the line if there is a multiline flag.
 
+(
+This symbol indicates groups #1 multiple tokens together and createa a capture group for extracting a substring or using a backreference.
 
-## Link to GitHub main project page
+[
+This symbol indicates a Character set which is matches any character in the set.
 
-[GitHub](https://github.com/Maykanwara/Regex-Tutorial)
-                              
-## Link to Deployed Application
+a-z
+This alphabet indicates a Range which is matches in the range "a"to "z"(char code 97 to 122). Case sensitive.
 
-[Live Deployment Link](gist:599838f96a5aa8fcdd50c5a7679def07)
-                     
-## Contact Information
+0-9
+This number indicates a Range which is matches a character in the ranhge "0" to "9" (char code 48 to 57). Case sensitive.
 
-Github: Maykanwara](https://github.com/Maykanwara)
-                  
-Email: maykanwara@gmail.com
+_
+This symbol indicates Character which is matches a "_" charater (char code 95).
 
+\.
+This symbol indicates Escaped character which is matches a "."character (char code 46).
 
+-
+This symbol indicates Character which is matches a "-" character (char code 45).
 
-17 Computer Science for JavaScript: Regex Tutorial
-Your Task
-Developers write code, but they also write about code. Take a moment to search the web for tutorials about any of the subjects you’ve learned so far in this course. You’re likely to find thousands of tutorials written by developers of all skill levels, including junior developers—like yourself!
++
+This symbol indicates Quantifier which is matches 1 or more of the preceding token.
 
-Your assignment this week is to create a tutorial that explains how a specific regular expression, or regex, functions by breaking down each part of the expression and describing what it does. You'll use the template provided in the starter code to create your walk through.
+@
+This symbol indicates Character which is matches a "@" character (char code 64).
 
-User Story
-AS A web development student
-I WANT a tutorial explaining a specific regex
-SO THAT I can understand the search pattern the regex defines
-Acceptance Criteria
-GIVEN a regex tutorial
-WHEN I open the tutorial
-THEN I see a descriptive title and introductory paragraph explaining the purpose of the tutorial, a summary describing the regex featured in the tutorial, a table of contents linking to different sections that break down each component of the regex and explain what it does, and a section about the author with a link to the author’s GitHub profile
-WHEN I click on the links in the table of contents
-THEN I am taken to the corresponding sections of the tutorial
-WHEN I read through each section of the tutorial
-THEN I find a detailed explanation of what a specific component of the regex does
-WHEN I reach the end of the tutorial
-THEN I find a section about the author and a link to the author’s GitHub profile
-What Is a Regex?
-A regex, which is short for regular expression, is a sequence of characters that defines a specific search pattern. When included in code or search algorithms, regular expressions can be used to find certain patterns of characters within a string, or to find and replace a character or sequence of characters within a string. They are also frequently used to validate input.
+(
+This symbol indicates Capture group #2 multiple tokens together and createa a capture group for extracting a substring or using a backreference.
 
-For example, the following regular expression can be used to verify that user input is a valid email address:
+[
+This symbol indicates a Character set which is matches any character in the set.
 
-/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+\d
+This symbol indicates a Digit which is matches any digit character (0-9).
 
-Each component of this regex has a unique responsibility to make sure that a user enters an email address that begins with an unspecified number of characters preceding the @ symbol, followed by a domain.
+a-z
+This alphabet indicates a Range which is matches in the range "a"to "z"(char code 97 to 122). Case sensitive.
 
-Before you get started, watch this introduction to regular expressions video and read Regex Tutorial: Matching a Username to learn how to identify the different components that make up a regex. If you need any additional help, there are many resources on the web. Feel free to do your own research to find one that can help you complete this assignment.
+\.
+This symbol indicates Escaped character which is matches a "."character (char code 46).
 
-Once you have a better understanding of what these different parts of a regular expression do, you’ll need to explain what they do for a specific regex.
+-
+This symbol indicates Character which is matches a "-" character (char code 45).
 
-You can choose one of the following regular expressions or you can choose one that you found on your own (with the exception of the one that is covered in the Regex Tutorial: Matching a Username:
++
+This symbol indicates Quantifier which is matches 1 or more of the preceding token.
 
-Matching a Hex Value: /^#?([a-f0-9]{6}|[a-f0-9]{3})$/
+\.
+This symbol indicates Escaped character which is matches a "."character (char code 46).
 
-Matching an Email: /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+(
+This symbol indicates Capture group #3 multiple tokens together and createa a capture group for extracting a substring or using a backreference.
 
-Matching a URL: /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
+[
+This symbol indicates a Character set which is matches any character in the set.
 
-Matching an HTML Tag: /^<([a-z]+)([^<]+)*(?:>(.*)<\/\1>|\s+\/>)$/
+a-z
+This alphabet indicates a Range which is matches in the range "a"to "z"(char code 97 to 122). Case sensitive.
 
-Getting Started
-Instead of creating a repository, you’ll publish a GitHub gist. GitHub describes a gist as a simple way to share code snippets with others. It’s also an ideal way to demonstrate a technique, teach a principle, or show off a solution. It functions just like a repository, and you’ll use Markdown to create it, just as you do with your READMEs. Gists can include code, images, links, and anything else you can include in a README.
+\.
+This symbol indicates Escaped character which is matches a "."character (char code 46).
 
-After you’ve downloaded the starter code, learn how to create a gist. You can also watch this video on how to use gists.
+{2,6}
+This symbol indicates Quantifier which is matches 2 to 6 of the preceding token.
 
-Note: Make sure to create a public gist.
+$
+This symbol indicates End which is matches the end of the string, or the end of a line if the multiple flag (m) is enabled.
 
-The starter code is a template with a title, introductory paragraph, summary, and table of contents. The table of contents should link to sections of the tutorial that describe the functionality of each component in the regex. Be sure to rename the template to a unique name that describes your tutorial.
-
-Note: The regular expression that you choose might not include all of the components outlined in the starter code. After you’ve finished your walkthrough, you can remove any sections that you didn’t use.
-
-Each section that describes a component should include more than just one sentence explaining what it does. It should also include a code snippet of that particular component and some examples that meet the requirements of that component.
-
-Important: Make revisions to your gist in the GitHub gist UI. This will create a revision history that graders can use to verify that the tutorial content is yours.
+Link to GitHub main project page
+[GitHub Gist](gist:599838f96a5aa8fcdd50c5a7679def07)
+Github
+[GitHub](https://github.com/Maykanwara)
+Email
+Maykanwara@gmail.com
